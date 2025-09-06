@@ -1,0 +1,447 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #0a0c0c;
+  padding-top: 80px; /* agar isi tidak ketiban navbar */
+}
+
+/* HEADER & NAVIGATION */
+header {
+  background-color: #00ffaa;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.peta {
+  width: 100%;
+  max-width: 600px;
+  height: 450px;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* opsional: tampilan elegan */
+}
+
+
+
+/* Container navbar */
+.navbar {
+  display: flex;
+  align-items: center; /* Vertikal sejajar */
+  justify-content: space-between; /* Logo kiri, menu kanan */
+  background-color: rgb(67, 76, 82);
+  padding: 10px 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;       /* Sesuaikan tinggi logo */
+  vertical-align: middle;
+}
+
+/* Menu navigasi */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+}
+
+.logo img {
+  height: 55px;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: left;
+  gap: 25px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  
+  padding: 8px 12px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #00ff88;
+  color: #000;
+  border-radius: 5px;
+}
+
+
+
+
+/* DROPDOWN */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  background-size: covers;
+  
+  list-style: none;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+}
+
+.submenu li a:hover {
+  background-color: #00ff88;
+  color: black;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url('bengkels.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 100px 30px;
+  text-align: center;
+  border-radius: 0; /* sudut tajam */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* gelapkan agar teks terbaca */
+  z-index: 0;
+}
+
+.hero h1,
+.hero h3,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+
+.btn-wa {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-wa:hover {
+  background-color: #1ebe5b;
+}
+
+/* LAYANAN BOX */
+.layanan-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px 15px;
+  
+}
+
+.layanan-box.dua-tak {
+  background-image: url('tampilan\ 2stroke.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* agar teks terlihat jika gambar gelap */
+  width: 30%;
+  height: 400px;
+}
+
+.layanan-box.empat-tak {
+  background-image: url('sempel4\ tak.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  width: 30%;
+  height: 400px;
+
+}
+
+.kontak-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.layanan-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  justify-content: center;
+}
+
+.layanan-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.layanan-box:hover {
+  transform: scale(1.03);
+}
+
+.layanan-box.besar {
+  width: 50%;
+  height: 500px;
+  background-image: url('tampilan\ 2stroke.jpg');
+}
+
+.layanan-box.kecil {
+  width: 40%;
+  height: 500px;
+  background-image: url('sempel4\ tak.jpg');
+}
+
+.teks-layanan {
+  background: rgba(0, 0, 0, 0.5); /* Lapisan gelap untuk keterbacaan teks */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.teks-layanan h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.teks-layanan p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+.kontak-btn img {
+  vertical-align: middle;
+}
+
+.instagram {
+  background-color: #e1306c;
+  color: white;
+}
+
+.instagram:hover {
+  background-color: #c72a5f;
+}
+
+.whatsapp {
+  background-color: #25D366;
+  color: white;
+}
+
+.whatsapp:hover {
+  background-color: #1eb653;
+}
+
+
+.layanan-box:hover {
+  transform: translateY(-5px);
+}
+
+.teks-layanan h3 {
+  margin-bottom: 10px;
+  color: #00aa66;
+}
+
+/* TABEL SERVIS */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+table th {
+  background-color: #00aa66;
+  color: white;
+}
+
+.catatan {
+  text-align: center;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  background-color: rgb(64, 74, 80) ;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+footer section#kontak h2 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+footer button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+footer img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* .layanan-container {
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .btn-wa {
+  display: inline-block;
+  background-color: #25D366; /* Warna hijau WhatsApp */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-wa:hover {
+  background-color: #1ebe5d;
+}
+
+
+}
+
+@media (max-widht: 700px) {
+ .btn-responsive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #00ff88;
+ }
+}
