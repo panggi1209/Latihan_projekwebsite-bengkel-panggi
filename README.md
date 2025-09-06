@@ -1,2 +1,126 @@
 # Latihan_projekwebsite-bengkel-panggi
 ini adalah lhasil latihan pembuatan website bengkel menggunakan html dan css 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bengkel  Panjoel Garage </title>
+  <link rel="stylesheet" href="bagian.css" />
+</head>
+
+
+<body>
+  <br>
+  <header>
+    <nav class="navbar contoh">
+      <div class="nav-container">
+      <img src="logopanji.png" alt="panjoelgarage_07" width="250px" height="100px">
+      
+        <ul>
+          <li><a href="#Home" title="Beranda">Beranda</a></li>
+          <li class="dropdown">
+            <a href="layanan.html" title="Lihat Layanan">Layanan</a>
+            <ul class="submenu">
+              <li><a href="service-motor-2-tak.html" title="Service Motor 2 Tak">SERVICE MOTOR (2STROKE)</a></li>
+              <li><a href="service-motor-4-tak.html" title="Service Motor 4 Tak">SERVICE MOTOR (4STROKE)</a></li>
+            </ul>
+          </li>
+          <li><a href="tentang.html" title="Tentang Bengkel Kami">Tentang Kami</a></li>
+          <li><a href="kontak.html" title="Hubungi Kami">Kontak Kami</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <br>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h3>Butuh bantuan?</h3>
+    <h1>Layanan Bengkel <br>Online, Praktis & Terpercaya!</h1>
+    <p>Perawatan dan perbaikan kendaraan langsung ke lokasi Anda. Cepat, transparan, dan fleksibel.</p>
+    <a href="https://wa.me/6285938360301?text=Halo%20saya%20ingin%20booking%20servis"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn-wa"
+       title="Hubungi Panjoel Garage di WhatsApp">
+      Jadwalkan Sekarang
+    </a>
+  </section>
+
+  <!-- Layanan -->
+  <section class="layanan-container">
+    <a href="service-motor-2-tak.html" class="layanan-box besar dua-tak" title="Service Motor 2 Stroke">
+      <div class="teks-layanan">
+        <h3>Motor 2 STROKE</h3>
+        <p>Layanan servis motor besar yang profesional dan praktis. Teknisi berpengalaman kami siap datang ke lokasi Anda, memastikan performa motor tetap optimal tanpa repot ke bengkel.</p>
+      </div>
+    </a>
+
+    <a href="service-motor-4-tak.html" class="layanan-box kecil empat-tak" title="Service Motor 4 Stroke">
+      <div class="teks-layanan">
+        <h3>Motor 4 STROKE</h3>
+        <p>Layanan servis motor kecil yang cepat, praktis, dan berkualitas. Teknisi handal kami siap datang ke lokasi Anda, memastikan motor selalu dalam kondisi prima tanpa perlu ke bengkel.</p>
+      </div>
+    </a>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section id="Tentang Kami">
+    <h2>Tentang Bengkel Panjoel Garage</h2>
+    <p>Panjoel Garage memulai perjalanan usahanya sejak tahun 1995, berkomitmen memberikan pelayanan bengkel terbaik untuk segala jenis kerusakan sepeda motor Anda. Dengan tim yang profesional dan ramah, kami siap membantu Anda menjaga performa motor tetap prima. Kami beroperasi setiap hari selama <b  >8 jam</b>, dan <b>libur pada hari Jum’at.</b>
+      Berkat kepercayaan dari pelanggan setia, Panjoel Garage telah menjadi bengkel pilihan yang <b backround color>sering direkomendasikan</b> dan dipercaya sepenuhnya oleh banyak pengendara. Kepuasan Anda adalah prioritas kami — datang dan rasakan sendiri layanan yang cepat, terpercaya, dan bersahabat!</p>
+  </section>
+
+  <!-- Lokasi -->
+  <section id=".peta">
+  <h2>Lokasi bengkel kami</h2>
+  <iframe 
+    title="Peta Lokasi Bengkel Panjoel"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.9469431647703!2d109.23536041101734!3d-7.359844592618524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655f4b61ac2347%3A0x8ed6fec2b8370128!2sPanjoel%20Garage!5e0!3m2!1sid!2sid!4v1752245880652!5m2!1sid!2sid"
+    class="peta"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <section id="kontak">
+      <h2>Kontak untuk menghubungi kami</h2>
+      <a href="https://www.instagram.com/panjoelgarage_07/" target="_blank" rel="noopener noreferrer" title="Instagram Panjoel Garage">
+        <button title="Instagram Panjoel Garage">
+          <img src="https://img.freepik.com/premium-psd/instagram-logo_971166-164497.jpg?semt=ais_hybrid&w=740"
+               width="35"
+               height="35"
+               alt="Instagram Logo" />
+        </button>
+      </a>
+
+      <a href="https://wa.me/6285938360301" target="_blank" rel="noopener noreferrer" title="WhatsApp Panjoel Garage">
+        <button title="WhatsApp Panjoel Garage">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1022px-WhatsApp.svg.png"
+               width="35"
+               height="35"
+               alt="WhatsApp Logo" />
+        </button>
+      </a>
+    </section>
+
+    <p>&copy;2025 Panggi Yulian Permana. semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    // Menambahkan class 'active' secara otomatis
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      if (window.location.href.includes(link.getAttribute("href"))) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+</body>
+</html>
